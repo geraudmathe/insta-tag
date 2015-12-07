@@ -1,6 +1,7 @@
 class ImageTagging
-  def initialize file
-    url = URI("http://api.imagga.com/v1/tagging?url=http%3A%2F%2Fplayground.imagga.com%2Fstatic%2Fimg%2Fexample_photo.jpg&version=2")
+  def self.tags_for_picture url
+
+    url = URI("http://api.imagga.com/v1/tagging?url=#{url}&version=2")
 
     http = Net::HTTP.new(url.host, url.port)
 
