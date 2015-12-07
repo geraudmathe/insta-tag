@@ -2,11 +2,35 @@
 <html>
 <head>
   <title>InstaTag</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "lib/reset.css" %>
+  <%= stylesheet_link_tag "lib/animate.css" %>
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:400,100,300,100italic,300italic,400italic,500,500italic,700,700italic" %>
+  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= yield %>
+  <div class="shader">
+    <ul class="menu">
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Upload Photo", new_picture_path %></li>
+    </ul>
+  </div>
+
+  <header>
+    <nav class="topbar">
+      <ul>
+<!--         <li class="menu right"><i class="fa fa-bars fa-2x"></i></li> -->
+        <li class="menu left"><i class="fa fa-tags fa-2x"></i></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
 </body>
 </html>
