@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root "pictures#new"
+  root "homepage#home"
   resources :pictures
 end
