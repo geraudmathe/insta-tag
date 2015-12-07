@@ -10,6 +10,8 @@ body {
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
+// HOMEPAGE
+
 .container {
   color: #fff;
   position: absolute;
@@ -51,6 +53,8 @@ body {
   }
 }
 
+// TOPBAR
+
 nav.topbar {
   background: none;
   height: 70px;
@@ -70,48 +74,33 @@ nav.topbar {
   }
 }
 
-.shader {
-  display: none;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 2;
-  width: 100%;
-  height: 100vh;
-  -webkit-animation-duration: 0.5s;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+// ADD PHOTO
 
-.main-opacity {
-  opacity: 0.5;
-  -webkit-transition: opacity 0.5s;
-}
-
-ul.menu {
-  margin: 0 auto;
-  margin-top: 100px;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-
-  li {
-    font-family: 'Roboto', sans-serif;
-    margin: 0 auto;
-    width: 180px;
-    font-size: 20px;
-    padding: 10px;
+.container {
+  img {
+    margin-top: -100px;
+    width: 150px;
+    border-radius: 100px;
+    border: 3px solid #fff;
   }
 
-  a {
-    color: #fff;
-    text-decoration: none;
+  h2 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .signout {
+    border: 0px;
+    background: #AA3939;
+    margin: 10px;
+    font-size: 15px;
+    padding: 2px 12px;
+    cursor: pointer;
   }
 }
