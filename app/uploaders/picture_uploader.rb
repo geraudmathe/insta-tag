@@ -7,7 +7,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  storage :fog
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -16,12 +16,6 @@ class PictureUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  after :cache, :tag_image
-
-  def tag_image(file)
-    puts file.inspect
-    ImageTagging.new(file)
-  end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url

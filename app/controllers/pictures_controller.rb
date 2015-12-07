@@ -10,6 +10,7 @@ class PicturesController < ApplicationController
   # GET /pictures/1
   # GET /pictures/1.json
   def show
+    @tags = ImageTagging.tags_for_picture(@picture.file.url)
   end
 
   # GET /pictures/new

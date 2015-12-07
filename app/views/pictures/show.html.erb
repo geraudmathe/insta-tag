@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>File:</strong>
-  <%= image_tag @picture.file.url %>
-</p>
+  <%= image_tag @picture.file.url, width: 400 %>
 
+<ul>
+  <% @tags.each do |tag| %>
+    <li><%= tag %></li>
+  <% end %>
+</ul>
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'Back', pictures_path %>
